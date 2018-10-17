@@ -91,5 +91,42 @@ void List::remove(int k)
 	num_elements--;
 	}
 	
+	
+	void List::clear()
+	{
+		while(size()!=0)
+		  remove(1);
+	 }
+	 
+	 
+	  int List::get(int k)
+{
+	//if (k < 1 or k > num_elements +1) //if the location is invalid
+	     //throw out_of_range("List::insert("+to_string(val)+", " +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements+1)+")");//throw an "out_of_range" exception
+	
+	
+	if(k == 1)
+	{
+		
+	  return 0;
+	 }
+	else
+	 {  
+	
+	   Node* tmpPtr = frontPtr;
+	  int loc = 1; 
+	  
+	    while( loc != k) //get pointer to k th node
+	     {
+		tmpPtr = tmpPtr->link;
+		loc++;
+	     }
+	     
+	return 0;
+	
+        }//end else
+
+     num_elements++;
+ }
 	//Implementations of missing operations
 	
