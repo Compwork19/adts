@@ -17,7 +17,7 @@ void Stack::push(int a)
 //remove element from stack
 void Stack::pop()
 {
-	 data.pop_back;  
+	 data.pop_back();  
 }
    
 
@@ -40,6 +40,5 @@ void Stack::clear()
 {
 	
 	while(size()!=0)
-	remove(1);
-	
+	data.pop_back();  
 }
