@@ -21,12 +21,14 @@ List::~List()
     while(num_elements > 0)
       remove(1);
 }
-	
+
+//size 
 int List::size()
  {
     return num_elements;
  }
 
+//insert at kth position
 void List::insert(int val, int k)
 {
 	if (k < 1 or k > num_elements +1) //if the location is invalid
@@ -59,6 +61,7 @@ void List::insert(int val, int k)
      num_elements++;
  }
 
+//remove at kth position
 void List::remove(int k)
 {
 	if (k < 1 or k > num_elements)//if the location is invalid 
@@ -91,42 +94,44 @@ void List::remove(int k)
 	num_elements--;
 	}
 	
-	
-	void List::clear()
-	{
+//clear list
+void List::clear()
+{
 		while(size()!=0)
 		  remove(1);
-	 }
+}
 	 
-	 
-	  int List::get(int k)
+//get element at kth position	 
+int List::get(int k)
 {
-	//if (k < 1 or k > num_elements +1) //if the location is invalid
-	     //throw out_of_range("List::insert("+to_string(val)+", " +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements+1)+")");//throw an "out_of_range" exception
-	
-	
-	if(k == 1)
-	{
-		
-	  return 0;
-	 }
-	else
-	 {  
+
 	
 	   Node* tmpPtr = frontPtr;
-	  int loc = 1; 
 	  
-	    while( loc != k) //get pointer to k th node
+	  
+	    for(int a=1;a != k;a++) //get pointer to k th node
 	     {
 		tmpPtr = tmpPtr->link;
-		loc++;
+		
 	     }
 	     
-	return 0;
+	return  tmpPtr->data;
 	
-        }//end else
+    
+}
 
-     num_elements++;
- }
-	//Implementations of missing operations
+//view list
+/*void List::view()
+{
+	
+		for(Node* tmpPtr ; tmpPtr != nullptr; tmpPtr -> link)
+		{
+			cout << tmpPtr->data <<" ";
+			
+		}
+		
+
+	  
+	  
+}*/
 	

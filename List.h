@@ -20,10 +20,8 @@ class List //begin List definition
      int size();//return the number of elements in the List
      int get(int k);//return element at location k
      void clear();//clear list
+     void view();//view list
      
-     
-     /** MISSING OPERATIONS */
-     //... fill in ....
 
 };//end List definition
 
