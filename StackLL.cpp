@@ -40,7 +40,7 @@ void Stack::pop()
 int Stack::top()
 {
 	if(size()==0)
-	  return 00;
+	  return 0;
 	else
 	  return frontPtr->data; 
 }
